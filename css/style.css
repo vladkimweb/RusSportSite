@@ -1,0 +1,266 @@
+:root {
+  --bs-primary-bg-subtle: #0099ff;
+  --primary: #0099ff;
+  --purple: #6f42c1;
+  --acsent: #0099ff;
+  --secondary: #30d5c8;
+  --dark: #21252f;
+  --body: #888;
+  --green: #198754;
+  --orange: #fd7e14;
+  --turquoise: #30d5c8;
+  --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  --apple: #fafafa;
+}
+/* *,
+::after,
+::before {
+  overflow-x: hidden;
+} */
+.underline {
+  position: relative;
+}
+.underline:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  height: 8px;
+  background-color: #0099ff;
+  opacity: 0.2;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.btn-primary {
+  background-color: #0099ff;
+  color: #eee;
+}
+.btn-primary:hover,
+.btn-primary:focus
+/* .btn-primary:visited */ {
+  background-color: #017acb;
+
+  color: #eee;
+}
+body {
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Ubuntu', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+  padding-top: 59px;
+  color: #2e2e2e;
+  background-color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: 'Montserrat';
+}
+
+.navbar {
+  background-color: #fafafa;
+  /* box-shadow: var(--box-shadow); */
+}
+
+.navbar .nav-link.active {
+  color: var(--bs-purple) !important;
+}
+
+.navbar a {
+  color: #2e2e2e;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: var(--bs-purple);
+}
+
+.bg-space {
+  background-image: url(/img/bg/space_blue.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.bg-tri {
+  background-image: url(/img/bg/triathlone.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bg-service {
+  background-image: url(/img/bg/orbits2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.bg-home {
+  background-image: url(/img/bg/stars3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.col-img {
+  background-image: url(/img/bgg.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 300px;
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.trainers-member img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  /* border-radius: 2px solid black; */
+  color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin-left: 5px;
+  transition: all 0.4s ease;
+  /* border: 2px solid black; */
+}
+
+.social-icons a:hover {
+  color: #fafafa;
+  background-color: transparent;
+  border-color: var(--bs-purple);
+}
+
+.footer-top {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #434343;
+  color: #fafafa;
+}
+
+.footer-top a {
+  color: var(--apple);
+}
+
+.footer-top a:hover {
+  color: #eee;
+}
+
+.footer-bottom {
+  background-color: #2e2e2e;
+  color: var(--apple);
+}
+
+.logo {
+  width: 160px;
+}
+
+.iconbox {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange);
+  color: #eee;
+  font-size: 32px;
+  border-radius: 100px;
+  flex: none;
+}
+
+.service {
+  background-color: #eee;
+  padding: 25px;
+  border-radius: 50px;
+}
+
+.service::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.service:hover::after {
+  opacity: 1;
+  top: 0;
+}
+
+#tria .iconbox {
+  background-color: #0099ff;
+}
+
+#sched {
+  background-color: #f5f5f5;
+}
+
+#steps .iconbox {
+  background-color: #eee;
+  color: var(--primary);
+}
+
+@media (max-width: 1441px) {
+  body {
+    font-size: 18px;
+  }
+}
+@media (max-width: 668px) {
+  .nav-link {
+    text-align: right;
+  }
+}
+
+@media (max-width: 500px) {
+  p {
+    margin-bottom: 0.5rem;
+  }
+  .social-icons,
+  .col-img {
+    display: none;
+  }
+  body {
+    font-size: 16px;
+  }
+  .mb-5 {
+    margin-bottom: 1rem !important;
+  }
+  #map-container {
+    width: 370px;
+  }
+  .card img {
+    height: 150px;
+  }
+  .card-body {
+    padding: 5px 0 5px 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  #map-container {
+    width: 320px;
+  }
+}
